@@ -1,15 +1,12 @@
-
-import {NgModule}  from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {UserComponent} from './user/user.component';
-import {LoginComponent} from './login/login.component';
-import { CityDistanceComponent } from './city-distance/city-distance.component';
+import { RegisterParcelComponent } from './register-parcel/register-parcel.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  { path: 'user', component: UserComponent },
+  { path: 'register-parcel', component: RegisterParcelComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'city-distance', component: CityDistanceComponent },
-  {path : '', component : LoginComponent}
+  { path: '', component: LoginComponent }
 ];
 @NgModule({
   imports: [

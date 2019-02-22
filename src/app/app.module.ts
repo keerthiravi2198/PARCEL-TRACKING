@@ -7,18 +7,15 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
-import { UserComponent } from './user/user.component';
-import { CityDistanceComponent } from './city-distance/city-distance.component';
-import { AgmCoreModule } from '@agm/core';            // @agm/core
+import { RegisterParcelComponent } from './register-parcel/register-parcel.component';
+import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
 import { AgmDirectionModule } from 'agm-direction';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    UserComponent,
-    CityDistanceComponent
-    
+    RegisterParcelComponent    
   ],
   imports: [
     BrowserModule,
@@ -27,12 +24,12 @@ import { AgmDirectionModule } from 'agm-direction';
     CustomMaterialModule,
     FormsModule,
     AppRoutingModule,
-    AgmCoreModule.forRoot({ // @agm/core
+    AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCfenLsPRbxZ8Br9VohX5a0hhqBw-zoNFE',
     }),
-    AgmDirectionModule,     // agm-direction
+    AgmDirectionModule,
   ],
-  providers: [],
+  providers: [GoogleMapsAPIWrapper],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
