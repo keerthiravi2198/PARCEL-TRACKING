@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CityDistanceComponent } from './city-distance.component';
+import { RegisterParcelComponent } from './register-parcel.component';
 
-describe('CityDistanceComponent', () => {
-  let component: CityDistanceComponent;
-  let fixture: ComponentFixture<CityDistanceComponent>;
+describe('RegisterParcelComponent', () => {
+  let component: RegisterParcelComponent;
+  let fixture: ComponentFixture<RegisterParcelComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CityDistanceComponent ]
+      declarations: [ RegisterParcelComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CityDistanceComponent);
+    fixture = TestBed.createComponent(RegisterParcelComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

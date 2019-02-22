@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { MatDialog } from '@angular/material';
 import { HttpClient } from '@angular/common/http';
 import axios from "axios";
 
@@ -19,11 +18,9 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router) { }
   username: string;
   password: string;
-  validornot: boolean;
   url: string;
-  ngOnInit() {
 
-    this.validornot = false;
+  ngOnInit() {
   }
 
   login(): void {
@@ -32,7 +29,7 @@ export class LoginComponent implements OnInit {
     axios.get(this.url).then(function(response) {
       console.log(response.data + '');
       if (response.data + '' == "true") {
-        self.router.navigate(["city-distance"]);
+        self.router.navigate(["register-parcel"]);
       }
       else {
         window.alert("Wrong Credentials");
@@ -40,6 +37,5 @@ export class LoginComponent implements OnInit {
     }).catch(function(error) {
       console.log(error);
     });
-   // self.router.navigate(["city-distance"]);
   }
 }
