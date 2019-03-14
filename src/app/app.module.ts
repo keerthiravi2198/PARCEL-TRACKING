@@ -10,12 +10,19 @@ import { LoginComponent } from './login/login.component';
 import { RegisterParcelComponent } from './register-parcel/register-parcel.component';
 import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
 import { AgmDirectionModule } from 'agm-direction';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { TrackComponent } from './track/track.component';
+import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database'
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterParcelComponent    
+    RegisterParcelComponent,
+    DashboardComponent,
+    TrackComponent    
   ],
   imports: [
     BrowserModule,
@@ -23,13 +30,15 @@ import { AgmDirectionModule } from 'agm-direction';
     BrowserAnimationsModule,
     CustomMaterialModule,
     FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCfenLsPRbxZ8Br9VohX5a0hhqBw-zoNFE',
     }),
     AgmDirectionModule,
   ],
-  providers: [GoogleMapsAPIWrapper],
+  providers: [GoogleMapsAPIWrapper, AngularFireDatabase],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
