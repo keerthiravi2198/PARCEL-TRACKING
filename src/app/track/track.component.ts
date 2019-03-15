@@ -44,6 +44,18 @@ export class TrackComponent implements OnInit{
 
   }
 
+  openDashboard(): void{
+    this.route.navigate(["dashboard"]);
+  }
+
+  openRegister(): void{
+    this.route.navigate(["register-parcel"]);
+  }
+
+  openLogin(): void{
+    this.route.navigate(["login"]);
+  }
+
   ngOnInit() {
     this.getDirection();
     
