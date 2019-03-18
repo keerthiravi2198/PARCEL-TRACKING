@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { CustomMaterialModule } from './core/material.module';
@@ -10,12 +12,16 @@ import { LoginComponent } from './login/login.component';
 import { RegisterParcelComponent } from './register-parcel/register-parcel.component';
 import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
 import { AgmDirectionModule } from 'agm-direction';
+import { OrdersummaryComponent } from './ordersummary/ordersummary.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterParcelComponent    
+    RegisterParcelComponent,
+    OrdersummaryComponent
+       
   ],
   imports: [
     BrowserModule,
@@ -28,6 +34,8 @@ import { AgmDirectionModule } from 'agm-direction';
       apiKey: 'AIzaSyCfenLsPRbxZ8Br9VohX5a0hhqBw-zoNFE',
     }),
     AgmDirectionModule,
+  
+    
   ],
   providers: [GoogleMapsAPIWrapper],
   bootstrap: [AppComponent]

@@ -1,0 +1,30 @@
+<div class="col-md-3 p-3" *ngFor="let prod of details">
+    <mat-card class="p-md-5" style="height: 100%">
+        <mat-card-content>
+            <h6 class="p-3 pb-5 text-center">PARCEL ORDER SUMMARY</h6>
+            <div class="row pl-5 pb-3">
+                <h6>NAME: </h6><span class="pl-1">{{prod.name}}</span>
+            </div>
+            <div class="row pl-5 pb-3">
+                <h6>ID: </h6><span class="pl-1">{{prod.id}}</span>
+            </div>
+            <div class="row pl-5 pb-3">
+                <h6>TRACK ID: </h6><span class="pl-1">{{prod.trackid}}</span>
+            </div>
+            <div class="row pl-5 pb-3">
+                <h6>AMOUNT: </h6><span class="pl-1">{{prod.amount}}</span>
+            </div>
+            <div class="row pl-5 pb-3">
+                <h6>SOURCE CITY: </h6><span class="pl-1">{{prod.source_city}}</span>
+            </div>
+            <div class="row pl-5 pb-3">
+                <h6>DESTINATION CITY: </h6><span class="pl-1">{{prod.destination_city}}</span>
+            </div>
+            <div class="row pl-5 pb-3">
+                <h6>:VEHICLE NUMBER: </h6><span class="pl-1">{{prod.vehicle}}</span>
+            </div>
+
+
+        </mat-card-content>
+    </mat-card>
+</div>

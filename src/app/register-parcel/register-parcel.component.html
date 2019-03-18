@@ -23,48 +23,42 @@
                         <tr>
                             <td>
                                 <mat-form-field style="width: 300px">
-                                    <input matInput placeholder="Source Address" [(ngModel)]="source_address"
-                                        type="text" name="source_address" required>
+                                    <input matInput placeholder="Source Address" [(ngModel)]="source_address" type="text" name="source_address" required>
                                 </mat-form-field>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <mat-form-field style="width: 300px">
-                                    <input matInput placeholder="Source City" [(ngModel)]="source_city" type="text"
-                                        name="source_city" required>
+                                    <input matInput placeholder="Source City" [(ngModel)]="source_city" type="text" name="source_city" required>
                                 </mat-form-field>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <mat-form-field style="width: 300px">
-                                    <input matInput placeholder="Destination Address" [(ngModel)]="destination_address"
-                                        type="text" name="destination_address" required>
+                                    <input matInput placeholder="Destination Address" [(ngModel)]="destination_address" type="text" name="destination_address" required>
                                 </mat-form-field>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <mat-form-field style="width: 300px">
-                                    <input matInput placeholder="Destination City" [(ngModel)]="destination_city"
-                                        type="text" (change)="onDeliveryChange($event.target.value)" name="destination_city" required>
+                                    <input matInput placeholder="Destination City" [(ngModel)]="destination_city" type="text" (change)="onDeliveryChange($event.target.value)" name="destination_city" required>
                                 </mat-form-field>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <mat-form-field style="width: 300px">
-                                    <input matInput placeholder="Phone Number" [(ngModel)]="phone_number" type="number"
-                                        name="phone_number" required>
+                                    <input matInput placeholder="Phone Number" [(ngModel)]="phone_number" type="number" name="phone_number" required>
                                 </mat-form-field>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <mat-form-field style="width: 300px">
-                                    <input matInput placeholder="Weight" [(ngModel)]="weight" type="number"
-                                        name="weight" (input)="onWeightChange($event.target.value)" required>
+                                    <input matInput placeholder="Weight" [(ngModel)]="weight" type="number" name="weight" (input)="onWeightChange($event.target.value)" required>
                                 </mat-form-field>
                             </td>
                         </tr>

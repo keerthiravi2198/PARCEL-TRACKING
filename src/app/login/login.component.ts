@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import axios from "axios";
 
+
 @Injectable()
 export class ConfigService {
   constructor(private http: HttpClient) { }
@@ -19,8 +20,12 @@ export class LoginComponent implements OnInit {
   username: string;
   password: string;
   url: string;
+  //isLoggedIn: boolean;
+ 
 
   ngOnInit() {
+    
+    
   }
 
   login(): void {
@@ -30,6 +35,7 @@ export class LoginComponent implements OnInit {
       console.log(response.data + '');
       if (response.data + '' == "true") {
         self.router.navigate(["register-parcel"]);
+       // this.isLoggedIn=true;
       }
       else {
         window.alert("Wrong Credentials");

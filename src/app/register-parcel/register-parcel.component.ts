@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import axios from "axios";
 
+
 @Injectable()
 export class ConfigService {
   constructor(private http: HttpClient) { }
@@ -31,9 +32,13 @@ export class RegisterParcelComponent implements OnInit, OnChanges {
   cost_pretext: string;
   weight_posttext: string;
   distance_posttext: string;
+  kilometer:number;
+
   url: string;
 
-  ngOnInit() { }
+  ngOnInit() { 
+   
+  }
 
   ngOnChanges(changes: any) {
     console.log(changes.name.currentValue);
@@ -65,15 +70,19 @@ export class RegisterParcelComponent implements OnInit, OnChanges {
         destination_address: this.destination_address,
         destination_city: this.destination_city,
         phone_number: this.phone_number,
-        weight: this.weight
+        weight: this.weight,
+        kilometer: this.total_distance,
+        amount : this.cost
       }
     }).then(res => {
       console.log(res.data);
       var jsonString = JSON.stringify(res.data);
       jsonString = jsonString.replace(/[{}]/g, '');
       console.log(jsonString);
-      alert(jsonString);
+     // alert(jsonString);
+      this.router.navigate(["ordersummary"]);
     });
+    
 
   }
 
