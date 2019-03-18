@@ -55,6 +55,18 @@ export class RegisterParcelComponent implements OnInit, OnChanges {
     this.distance();
   }
 
+  openDashboard(): void{
+    this.router.navigate(["dashboard"]);
+  }
+
+  openRegister(): void{
+    this.router.navigate(["register-parcel"]);
+  }
+
+  openLogin(): void{
+    this.router.navigate(["login"]);
+  }
+
   register = () => {
     if ((this.name.length == 0 || this.source_address.length == 0 || this.source_city.length == 0 || this.destination_address.length == 0 || this.destination_city.length == 0 ||
       this.phone_number.length == 0 || this.weight.toString.length == 0)) {

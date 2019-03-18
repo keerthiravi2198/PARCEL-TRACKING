@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+  <span>Virtusa Project</span>
+  <span class="toolbar-spacer"></span>
+  <button mat-button (click)="openDashboard()">Dashboard</button>
+  <button mat-button (click)="openDashboard()">Register Parcel</button>
+  <button mat-button (click)="openLogin()">Sign Out</button>
+</mat-toolbar>
+<div class="row" style="height: 100%">
+    <div class="col-md-3">
+        <mat-card class="p-4 m-4">
+            <h4>Parcel Tracking ID - {{id}}</h4>
+            <br><br>
+            <h6>Amount - {{amount}} INR</h6>
+            <h6>Name - {{name}}</h6>
+            <h6>Source City - {{scity}}</h6>
+            <h6>Destination City - {{dcity}}</h6>
+            <br><br>
+        </mat-card>
+    </div>
+    <div class="col-md-9">
+        <mat-card class="p-4 m-4">
+            <agm-map style="height:400px" [latitude]='11.2503696' [longitude]='76.9365486' [zoom]='9' [zoomControl]="false">
+              <agm-marker [title]="'Current Loaction'" *ngFor="let id of (locations2 | slice:locations2.length - 1)" [latitude]="id.lat" [longitude]="id.long"></agm-marker>
+              <agm-direction [origin]="scity" [destination]="dcity"></agm-direction>
+            </agm-map><br><br>
+        </mat-card>
+    </div>
+  </div>

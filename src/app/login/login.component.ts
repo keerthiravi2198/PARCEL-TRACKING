@@ -44,4 +44,16 @@ export class LoginComponent implements OnInit {
       console.log(error);
     });
   }
+
+  openDashboard(): void{
+    this.router.navigate(["dashboard"]);
+  }
+
+  openRegister(): void{
+    this.router.navigate(["register-parcel"]);
+  }
+
+  openLogin(): void{
+    this.router.navigate(["login"]);
+  }
 }
