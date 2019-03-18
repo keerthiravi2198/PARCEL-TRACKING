@@ -24,6 +24,18 @@ export class DashboardComponent implements OnInit {
     });
   }
 
+  openDashboard(): void{
+    this.router.navigate(["dashboard"]);
+  }
+
+  openRegister(): void{
+    this.router.navigate(["register-parcel"]);
+  }
+
+  openLogin(): void{
+    this.router.navigate(["login"]);
+  }
+
   openTracking(id: any): void{
     console.log(id);
     let navigationExtras: NavigationExtras = {

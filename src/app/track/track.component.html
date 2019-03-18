@@ -1,9 +1,10 @@
 <mat-toolbar color="primary">
-    <span>Virtusa Project</span>
-    <span class="example-fill-remaining-space"></span>
-    <span class="align-center"></span>
-    <span class="example-spacer"></span>
-  </mat-toolbar>
+  <span>Virtusa Project</span>
+  <span class="toolbar-spacer"></span>
+  <button mat-button (click)="openDashboard()">Dashboard</button>
+  <button mat-button (click)="openDashboard()">Register Parcel</button>
+  <button mat-button (click)="openLogin()">Sign Out</button>
+</mat-toolbar>
 <div class="row" style="height: 100%">
     <div class="col-md-3">
         <mat-card class="p-4 m-4">
