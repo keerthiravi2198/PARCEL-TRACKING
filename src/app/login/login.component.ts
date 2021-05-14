@@ -41,6 +41,7 @@ export class LoginComponent implements OnInit {
         window.alert("Wrong Credentials");
       }
     }).catch(function(error) {
+      console.log("Exception");
       console.log(error);
     });
   }
