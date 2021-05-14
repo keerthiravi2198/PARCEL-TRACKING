@@ -18,6 +18,7 @@ export class DashboardComponent implements OnInit {
     var parent = this;
     axios.get("http://www.mocky.io/v2/5c89b9c62b00005300dbdb87").then(function(response) {
       console.log(JSON.stringify(response.data));
+      console.log("hey");
       parent.ids = response.data;
     }).catch(function(error) {
       console.log(error);
