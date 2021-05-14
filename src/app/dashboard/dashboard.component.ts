@@ -18,6 +18,7 @@ export class DashboardComponent implements OnInit {
     var parent = this;
     axios.get("http://www.mocky.io/v2/5c89b9c62b00005300dbdb87").then(function(response) {
       console.log(JSON.stringify(response.data));
+      console.log("hey");
       parent.ids = response.data;
     }).catch(function(error) {
       console.log(error);
@@ -25,6 +26,7 @@ export class DashboardComponent implements OnInit {
   }
 
   openDashboard(): void{
+    console.log("Sample log mahithaa");
     this.router.navigate(["dashboard"]);
   }
 
@@ -37,8 +39,7 @@ export class DashboardComponent implements OnInit {
   }
 
   openTracking(id: any): void{
-    console.log(id);
-    let navigationExtras: NavigationExtras = {
+      let navigationExtras: NavigationExtras = {
       queryParams: {
           "id": JSON.stringify(id)
       }
