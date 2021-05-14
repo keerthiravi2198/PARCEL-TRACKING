@@ -37,8 +37,7 @@ export class DashboardComponent implements OnInit {
   }
 
   openTracking(id: any): void{
-    console.log(id);
-    let navigationExtras: NavigationExtras = {
+      let navigationExtras: NavigationExtras = {
       queryParams: {
           "id": JSON.stringify(id)
       }
