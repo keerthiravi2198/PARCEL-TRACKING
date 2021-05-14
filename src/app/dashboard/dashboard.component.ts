@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit {
   }
 
   openDashboard(): void{
-   
+    console.log("Welcome");
     console.log("Sample log Keerthana");
     console.log("Sample log mahithaa");
     this.router.navigate(["dashboard"]);
